@@ -1,0 +1,17 @@
+services:
+  app_api-example:
+    env_file: .env
+    build: ./
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    restart: on-failure
+    depends_on:
+      - api-db
+  api-db:
+    env_file: .env
+    image: postgres
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
