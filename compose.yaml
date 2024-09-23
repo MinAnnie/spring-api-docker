@@ -6,7 +6,7 @@ services:
       - "8080:8080"
     environment:
       DB_URL: jdbc:postgresql://api-db:5432/api-example
-      DB_USER_NAME: user
+      DB_USER_NAME: angie
       DB_PASSWORD: 12345
     restart: on-failure
     depends_on:
@@ -14,10 +14,11 @@ services:
   api-db:
     image: postgres
     environment:
-      POSTGRES_USER: user
+      POSTGRES_USER: angie
       POSTGRES_PASSWORD: 12345
       POSTGRES_DB: api-example
     volumes:
       - ./data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"
