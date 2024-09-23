@@ -33,37 +33,44 @@ Esto creará los contenedores necesarios para levantar la aplicación.
 
 ## Tabla necesaria para la correcta ejecución
 
-Para poder que funcione el CRUD de esta API, debes generar una tabla products de la siguiente manera:
+Para poder que funcione el CRUD de esta API, incluí un pequeño archivo SQL que crea una tabla products y añade 10
+productos por defecto para que puedas hacer pruebas.
+
+Esta se añade a nuestra base de datos usando la propiedad `docker-entrypoint-initdb.d` de docker para ejecutar el script
+al inicializar.
 
 ```postgresql
-create table products
+-- init.sql
+CREATE TABLE IF NOT EXISTS products
 (
-    name        varchar(50),
-    description varchar(250),
+    name
+                VARCHAR(100),
+    description TEXT,
     id          serial
-        constraint id
-            primary key
+        CONSTRAINT id PRIMARY KEY
 );
+
+-- Insertar 10 datos en la tabla products
+INSERT INTO products (name, description)
+VALUES ('Producto 1', 'Descripción del producto 1'),
+       ('Producto 2', 'Descripción del producto 2'),
+       ('Producto 3', 'Descripción del producto 3'),
+       ('Producto 4', 'Descripción del producto 4'),
+       ('Producto 5', 'Descripción del producto 5'),
+       ('Producto 6', 'Descripción del producto 6'),
+       ('Producto 7', 'Descripción del producto 7'),
+       ('Producto 8', 'Descripción del producto 8'),
+       ('Producto 9', 'Descripción del producto 9'),
+       ('Producto 10', 'Descripción del producto 10');
+
 ```
 
 De esta forma no tendrás conflictos con los datos que le mandas a la base de datos desde la API.
 
-Y estas son las acciones que puedes realizar:
+puedes ver las acciones que puedes realizar con una documentación explicativa accediendo a la ui de swagger:
 
-* GET - localhost:8080/api/products
-* GET - localhost:8080/api/products/{id}
-* POST - localhost:8080/api/products
-* PUT - localhost:8080/api/products/{id}
-* DELETE - localhost:8080/api/products/{id}
+http://localhost:8080/swagger-ui/index.html#/
 
-Y este el JSON necesario para create y put:
-```json
-{
-	"name": "nombre",
-	"description": "descripción"
-}
-```
-
-Espero te sirva! 
+Espero te sirva!
 [Twitter](https://x.com/AngieMatiz6) -
 [LinkedIn](https://www.linkedin.com/in/angie-matiz/)
