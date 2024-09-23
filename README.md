@@ -9,7 +9,7 @@ Este proyecto es para tener un servicio API dockerizado por lo que facilitaría 
 
 ### Antes de correr docker
 
-Debes tener instalado en tu máquina la JVM en su versión 22, ya que esta se usó para la creación de este proyecto, así
+Debes tener instalado en tu máquina la Jdk en su versión 22, ya que esta se usó para la creación de este proyecto, así
 evitarás conflictos.
 
 Correr los siguientes comandos
