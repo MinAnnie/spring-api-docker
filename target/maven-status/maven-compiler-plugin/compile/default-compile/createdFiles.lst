@@ -1,6 +1,0 @@
-org/avmp/apiexample/ApiExampleApplication.class
-org/avmp/apiexample/repositories/ProductRepository.class
-org/avmp/apiexample/controllers/ProductController.class
-org/avmp/apiexample/services/ProductServiceImp.class
-org/avmp/apiexample/services/ProductService.class
-org/avmp/apiexample/entities/Product.class

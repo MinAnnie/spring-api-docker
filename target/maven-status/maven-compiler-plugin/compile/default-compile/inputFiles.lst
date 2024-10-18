@@ -1,6 +1,0 @@
-/home/angie/Documentos/proyectos/personal-web/api-example/src/main/java/org/avmp/apiexample/ApiExampleApplication.java
-/home/angie/Documentos/proyectos/personal-web/api-example/src/main/java/org/avmp/apiexample/controllers/ProductController.java
-/home/angie/Documentos/proyectos/personal-web/api-example/src/main/java/org/avmp/apiexample/entities/Product.java
-/home/angie/Documentos/proyectos/personal-web/api-example/src/main/java/org/avmp/apiexample/repositories/ProductRepository.java
-/home/angie/Documentos/proyectos/personal-web/api-example/src/main/java/org/avmp/apiexample/services/ProductService.java
-/home/angie/Documentos/proyectos/personal-web/api-example/src/main/java/org/avmp/apiexample/services/ProductServiceImp.java
