@@ -71,6 +71,8 @@ puedes ver las acciones que puedes realizar con una documentación explicativa a
 
 http://localhost:8080/swagger-ui/index.html#/
 
+## Contribuidor
+Facundo @M3mbrillo
 Espero te sirva!
 [Twitter](https://x.com/AngieMatiz6) -
 [LinkedIn](https://www.linkedin.com/in/angie-matiz/)
